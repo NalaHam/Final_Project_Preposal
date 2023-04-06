@@ -2,15 +2,20 @@
 
 ## What will (likely) be the title of your project?
 
-TODO
+Replicator dynamics in Python
 
 ## In just a sentence or two, summarize your project. (E.g., "A website that lets you buy and sell stocks.")
 
-TODO
+Code that takes in a two or three player game with a payoff matrix and gives a graph that shows if a given game has an equilibrium or not. 
 
 ## In a paragraph or more, detail your project. What will your software do? What features will it have? How will it be executed?
 
-TODO
+This project will examplify replicator dynamics, a key topic in evolutionary game theory. A replicator dynamic of model of a population allows for selection to happen in a population. This is based on a payoff matrix for all the types in a population. The replicator equation that this type of modeling comes from doesn't include mutations (or the ablility to change into a different type), but with some modifications mutations can be accounted for. 
+
+This project will create code that takes in a payoff matrix, initial population frequencies of different types, and probability of mutation for each of those types and produces a graphical representation of a population over a long time period. Ideally the graphs should show if a given population has an equilibrium or if it osilates between different population frequencies. For this project two types of graphs will be made. The first will be a x-y plot with the y axis being population frequencies and x axis being time. If a population has an equilibirum the frequencies of all the types in a population will end up 
+
+
+To do this the Numpy package and Nashpy package along with it's replicator function will be used.
 
 ## If planning to combine 1051's final project with another course's final project, with which other course? And which aspect(s) of your proposed project would relate to 1051, and which aspect(s) would relate to the other course?
 
