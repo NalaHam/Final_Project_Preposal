@@ -2,7 +2,7 @@
 
 ## What will (likely) be the title of your project?
 
-Replicator dynamics in Python
+Replicator Dynamics in Python
 
 ## In just a sentence or two, summarize your project. (E.g., "A website that lets you buy and sell stocks.")
 
