@@ -22,7 +22,7 @@ I have the code and graphs completed.
 
 #### What have you not done for your project yet?
 
-Formulated it in a user friendly way. I want the code to readable and with explainations. 
+Formulated it in a user friendly way. I want the code to be readable and have explainations. 
 
 #### What problems, if any, have you encountered?
 
