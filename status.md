@@ -2,15 +2,15 @@
 
 #### Your name
 
-TODO
+Nala Hamilton
 
 #### Your section leader's name
 
-TODO
+Chong Li
 
 #### Project title
 
-TODO
+Evolutionary Game Theory and Replicator Dynamics in Python
 
 ***
 
@@ -18,12 +18,12 @@ Short answers for the below questions suffice. If you want to alter your plan fo
 
 #### What have you done for your project so far?
 
-TODO
+I have the code and graphs completed. 
 
 #### What have you not done for your project yet?
 
-TODO
+Formulated it in a user friendly way. I want the code to readable and with explainations. 
 
 #### What problems, if any, have you encountered?
 
-TODO
+None. 
