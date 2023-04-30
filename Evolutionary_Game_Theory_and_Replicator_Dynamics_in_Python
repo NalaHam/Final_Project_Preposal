@@ -1,3 +1,7 @@
+#This project is created to simulate a population through time
+#It uses the nashpy package and it's documentation can be found here: https://nashpy.readthedocs.io/en/stable/
+#It also uses the egtplot package and it's documentation can be found here: https://www.biorxiv.org/content/10.1101/300004v2.full.pdf
+#To start:
 #import all relievent packages
 
 import nashpy as nash
@@ -6,38 +10,33 @@ import matplotlib.pyplot as plt
 
 #First we will evaluate a game with two types
 #create a game for a population with two types
-A = np.array(((2, 1), (3, 0)))        #payoffs of being A and B
+A = np.array(((2, 1), (3, 0)))  #payoffs of type A and B
 game = nash.Game(A)
 
 #create a timeline
 generations = game.replicator_dynamics(y0 =(0.2,0.8)) #y0 states what the population frequencies are
 
-#create a graph of the timeline to show how the dynamics of the three population types evolve
+#create a graph of the timeline to show the dynamics of the two population types
 plt.plot(generations) 
 plt.xlabel("Timepoints") 
 plt.ylabel("Population Type Frequencies") 
 plt.title("Frequencies of Population Types over time") 
 plt.legend(['Type A', 'Type B'], loc='upper left')
 
-#this graph can be used to see the frequency trends over time and if the population comes to an equilibrium or not
+#this graph can be used to see the frequency trends over time and if the population comes to an equilibrium or not. If the types oscillate there is not a stable equilibrium. 
 
 #Now to we can try to do the same with three types in a population
 #create a game for a population with three types
-
-A = np.array([[2, -1, 1], [4, 1, 0], [1, 1, 0]]) #payoffs of being A, B, C
-
+A = np.array([[2, -1, 1], [4, 1, 0], [1, 1, 0]]) #payoffs of types A, B, C
 game = nash.Game(A)
 
 #set population starting frequencies
-
 y0 = np.array([0.3, 0.4, 0.0]) #Type A, B, and C start are 0.3, 0.4, 0.0 population frequencies. 
 
 #create a timeline
-
 generations = game.replicator_dynamics(y0=y0)
 
 #create a graph of the timeline to show how the dynamics of the three population types evolve
-
 plt.plot(generations) 
 plt.xlabel("Timepoints") 
 plt.ylabel("Population Type Frequencies") 
@@ -46,7 +45,7 @@ plt.legend(['Type A', 'Type B', 'Type C'], loc='upper left')
 
 #this graph can give us information on what population frequencies are stable and if the population has an equilibrium, but another way is to make a different graph
 
-#create a simplex graph for three types in a population, url to paper: https://www.biorxiv.org/content/10.1101/300004v2.full.pdf
+#create a simplex graph for three types in a population
 
 #install and import relievent packages
 
@@ -56,8 +55,9 @@ pip install egtplot
 payoff_entries = [[2], [-1], [1], [4], [1], [0], [1], [1], [0]]
 simplex = plot_static(payoff_entries, background = True)
 
-#This code does not take in population frequencies because every frequency is shown in the graph. Open circles mean unstable equilibrium. Closed circles mean stable equilibrium.
-#A dark rectangle on the edge shows that every point on that edge is an equlibrium. A gray circle means that it is a semi stable equilibrium
+#This code does not take in population frequencies because every frequency is shown in the graph. The arrows show the trends in the population frequencies. Where the arrows converge are equilibrium. 
+#Open circles mean unstable equilibrium. Closed circles mean stable equilibrium. A gray circle means that it is a semi stable equilibrium.
+#A dark rectangle on the edge shows that every point on that edge is an equlibrium. 
 
 #we can also graph the evolution of a population with the chance of mutation
 #we take the same information from before and add in probabilibies of mutation for each type in the population
